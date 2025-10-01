@@ -237,11 +237,13 @@ sensor:
       accuracy_decimals: 1
     temperature:
       name: "SEN55 Temperature"
-      accuracy_decimals: 1
+      id: sen55_temperature
       filters:
         - lambda: return x - id(sen55_temperature_offset).state;
+      accuracy_decimals: 1
     humidity:
       name: "SEN55 Humidity"
+      id: sen55_humidity
       filters:
         - lambda: return x - id(sen55_humidity_offset).state;
       accuracy_decimals: 1
